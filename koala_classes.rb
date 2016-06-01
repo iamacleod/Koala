@@ -9,6 +9,7 @@ class UserStory
     @sprint = sprint
     @project = project
   end
+  attr_accessor :name, :pointVal, :sprint, :project
 end
 
 #create class for sprint
@@ -21,6 +22,7 @@ class sprint
     @startDate = startDate
     @endDate = endDate
   end
+  attr_accessor :name, :userStories, :startDate, :endDate, :project
 end
 
 #create class for project
@@ -32,4 +34,5 @@ class project
     @startDate = startDate
     @endDate = endDate
   end
+  attr_accessor :name, :sprints, :startDate, :endDate
 end
