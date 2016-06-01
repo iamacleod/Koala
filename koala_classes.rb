@@ -13,7 +13,7 @@ class UserStory
 end
 
 #create class for sprint
-class sprint
+class Sprint
   def initialize(name, userStories, project, startDate, endDate)
     #instance variables
     @name = name
@@ -26,7 +26,7 @@ class sprint
 end
 
 #create class for project
-class project
+class Project
   def initialize(name, sprints, startDate, endDate)
     #instance variables
     @name = name
