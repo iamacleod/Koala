@@ -2,37 +2,47 @@
 
 #create class for user story
 class UserStory
-  def initialize(name, pointVal, sprint, project)
+  def initialize(user_story_id, sprint_name, sprint_id, project_name, project_id, user_story_name, pointval, completed)
     #instance variables
-    @name = name
-    @pointVal = pointVal
-    @sprint = sprint
-    @project = project
+    @user_story_id = user_story_id
+    @sprint_name = sprint_name
+    @sprint_id = sprint_id
+    @project_name = project_name
+    @project_id = project_id
+    @user_story_name = user_story_name
+    @pointval = pointval
+    @completed = completed
   end
   attr_accessor :name, :pointVal, :sprint, :project
 end
 
 #create class for sprint
 class Sprint
-  def initialize(name, userStories, project, startDate, endDate)
+  def initialize(sprint_id, project_name, project_id, sprint_name, start_date, end_date, value_points, completed_value_points)
     #instance variables
-    @name = name
-    @userStories = userStories
-    @project = project
-    @startDate = startDate
-    @endDate = endDate
+    @sprint_id = sprint_id
+    @project_name = project_name
+    @project_id = project_id
+    @sprint_name = sprint_name
+    @start_date = start_date
+    @end_date = end_date
+    @value_points = value_points
+    @completed_value_points = completed_value_points
   end
   attr_accessor :name, :userStories, :startDate, :endDate, :project
 end
 
 #create class for project
 class Project
-  def initialize(name, sprints, startDate, endDate)
+  def initialize(project_id, project_name, project_owner, project_contact, project_created, project_projected_completion, project_completed)
     #instance variables
-    @name = name
-    @sprints = sprints
-    @startDate = startDate
-    @endDate = endDate
+    @project_id = project_id
+    @project_name = project_name
+    @project_owner = project_owner
+    @project_contact = project_contact
+    @project_created = project_created
+    @project_projected_completion = project_projected_completion
+    @project_completed = project_completed
   end
   attr_accessor :name, :sprints, :startDate, :endDate
 end
