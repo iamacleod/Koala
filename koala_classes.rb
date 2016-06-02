@@ -13,7 +13,7 @@ class UserStory
     @pointval = pointval
     @completed = completed
   end
-  attr_accessor :name, :pointVal, :sprint, :project
+  attr_accessor :user_story_id, :sprint_name, :sprint_id, :project_name, :project_id, :user_story_name, :pointval, :completed
 end
 
 #create class for sprint
@@ -29,7 +29,7 @@ class Sprint
     @value_points = value_points
     @completed_value_points = completed_value_points
   end
-  attr_accessor :name, :userStories, :startDate, :endDate, :project
+  attr_accessor :sprint_id, :project_name, :project_id, :sprint_name, :start_date, :end_date, :value_points, :completed_value_points
 end
 
 #create class for project
@@ -44,5 +44,5 @@ class Project
     @project_projected_completion = project_projected_completion
     @project_completed = project_completed
   end
-  attr_accessor :name, :sprints, :startDate, :endDate
+  attr_accessor :project_id, :project_name, :project_owner, :project_contact, :project_created, :project_projected_completion, :project_completed
 end
